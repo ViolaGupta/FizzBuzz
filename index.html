@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Fizz Buzz</title>
+        <style>
+            @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	
+}
+
+body {
+	
+	font-size: 100%;
+	line-height: 1.25;
+	font-family: 'Lato', Arial, sans-serif;
+     background-color: lightgrey;
+}
+            div {
+               margin: 5px;
+                width: 70px;
+                height: 70px;
+            display: inline-block;
+            padding: 10px;
+                text-align: center;
+                 box-shadow: 5px 5px 2px #888888;
+                border-radius: 3px;
+}
+            .three{
+                background-color: cadetblue;
+            }
+            .five{
+                background-color: goldenrod;
+            }
+           
+            .none{
+                background-color: maroon;
+            }
+  
+
+.fizzbuzz {
+  background:#212531;
+  background: linear-gradient(to right bottom, cadetblue 50%, goldenrod 50%);
+  height: 70px;
+    width: 70px;
+  display:inline-block;
+ 
+ 
+  text-align:center;
+  
+  color:#ffffff;
+  font-weight:normal;
+  
+  font-family:sans-serif;
+}
+            button {
+	background: rgba(0,0,0,0);
+	border: 2px solid #8d9a97;
+	color: #8d9a97;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 8px 15px;
+	margin: 20px;
+	font-weight: bold;
+	font-size: 0.85em;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+        </style>
+    </head>
+    <body>
+        <h3><span style="font-weight:100;">Fizz Buzz is a common practice problem used in programming interviews.</span></h3>
+        <p>Fizz is for numbers divisible by 3<br>
+        Buzz is for numbers divisible by 5<br>
+        And FizzBuzz is for numbers divisible by both 3 and 5</p>
+        <button onclick="myFunction()" id="button">Fizz Buzz Me</button>
+        <br>
+        
+    <script>
+        var i=1;
+      
+        function myFunction(){
+        
+            if(i<=72){
+        var iDiv = document.createElement('div');
+iDiv.id = 'block';
+
+            if(i%3==0 && i%5!=0){
+                iDiv.className = 'three';
+document.getElementsByTagName('body')[0].appendChild(iDiv);
+
+iDiv.innerHTML = "Fizz";
+
+
+            }
+            if(i%5==0 && i%3!=0){
+               iDiv.className = 'five';
+document.getElementsByTagName('body')[0].appendChild(iDiv);
+
+iDiv.innerHTML = "Buzz";
+
+
+            }
+            if(i%3!=0 && i%5!=0){
+               iDiv.className = 'none';
+document.getElementsByTagName('body')[0].appendChild(iDiv);
+
+iDiv.innerHTML = i;
+            }
+            if(i%3==0 && i%5==0){
+                 iDiv.className = 'fizzbuzz';
+document.getElementsByTagName('body')[0].appendChild(iDiv);
+
+iDiv.innerHTML = "FizzBuzz";
+
+            }
+       i++;
+        
+        }
+             else{
+            document.getElementsByTagName('body').removeChild(iDiv);
+    
+            }
+          }
+       
+        </script>
+    </body>
+</html>
